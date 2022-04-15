@@ -1,6 +1,8 @@
 # ICS 32 Messaging Application
-## INSTRUCTIONS FOR USING THE PROGRAM:
+![image](https://cdn.discordapp.com/attachments/808213206253961216/950523897508425728/messenger.gif)
 
+## INSTRUCTIONS FOR USING THE PROGRAM:
+	For documentation, please view the docs folder
 	Run ds_ui.py
 	To start sending and receiving messages, a valid user must be logged in using the "Log In" button on the top left corner of the window.
 	If the username and password do not match, the user won't be able to send or receive messages.
@@ -11,6 +13,7 @@
 	Now the user is able to send and receive messages.
 	Use "Send" to send whatever is on the entry box.
 	Use "Update Messages" to update the current chat to see if there are any new messages.
+
 
 ## Acknowledgements
 For the method: addUser()
