@@ -1,4 +1,4 @@
-# uci-messaging-app
+# ICS 32 Messaging Application
 ## INSTRUCTIONS FOR USING THE PROGRAM:
 
 	Run ds_ui.py
