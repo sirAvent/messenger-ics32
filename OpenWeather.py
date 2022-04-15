@@ -2,8 +2,6 @@ import urllib, json
 from urllib import request,error
 from datetime import datetime
 
-#85b35a1129e8d147851f71ecde8bc02e - The API key
-
 
 class OpenWeather:
     """
@@ -89,7 +87,7 @@ def _download_url(url_to_download: str) -> dict:
 def main() -> None:
     zip = "91706"
     ccode = "US"
-    apikey = "85b35a1129e8d147851f71ecde8bc02e"
+    apikey = "YOUR API KEY HERE"
     url = f"https://api.openweathermap.org/data/2.5/weather?zip={zip},{ccode}&appid={apikey}"
     
     weather_obj = _download_url(url)
