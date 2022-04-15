@@ -68,7 +68,7 @@ def _download_url(url_to_download: str) -> dict:
 def main() -> None:
     page = "2"
     limit = "10"
-    apikey = "3ceeebef4e84ac6acfa739ad3338c196"
+    apikey = "YOUR API HERE"
     url = f"http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key={apikey}&page={page}&limit={limit}&format=json"
 
     lastFM_obj = _download_url(url)
