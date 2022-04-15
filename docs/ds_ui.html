@@ -1,0 +1,1644 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>ds_ui API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ds_ui</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import tkinter as tk
+from tkinter import ttk, filedialog, simpledialog
+import ds_messenger
+from ds_messenger import DirectMessage
+
+
+class loadedUser():
+    &#34;&#34;&#34;
+    A loadedUser object used for storing data on the currently loaded user account on the UI.
+    Useful for finding current username and password.
+
+    Attributes:
+
+    username - The username of the currently loaded account.
+    password - The password of the currently loaded account.
+    &#34;&#34;&#34;
+    def __init__(self, username=None, password=None):
+        global current_username
+        global current_password
+        self.username = current_username
+        self.password = current_password
+
+
+    def set_password(self, entry:str) -&gt; None:
+        &#39;&#39;&#39;
+        Set the password attribute to the inputted string.
+        Useful when a new user is logged in.
+        &#39;&#39;&#39;
+        self.password = entry
+
+
+    def set_username(self, entry:str) -&gt; None:
+        &#39;&#39;&#39;
+        Set the username attribute to the inputted string.
+        Useful when a new user is logged in.
+        &#39;&#39;&#39;
+        self.username = entry
+
+
+    def set_dsuserver(self, entry:str) -&gt; None:
+        &#39;&#39;&#39;
+        Set the dsusver attribute to the inputted string.
+        Use for third-party applications since the default
+        server is the ICS 32&#39;s distributed address.
+        &#39;&#39;&#39;
+        self.dsuserver = entry
+
+
+class Body(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the body portion of the root frame.
+    &#34;&#34;&#34;
+    def __init__(self, root, select_callback=None):
+        tk.Frame.__init__(self, root)
+        self.root = root
+        self._select_callback = select_callback
+        global clicked_user
+        clicked_user = None
+        #clicked_user is the currently selected user in the Message Tree widget.
+
+        # a list of the DirectMessage objects, same structure needed for message objects
+        self._messages = [DirectMessage]
+        
+        # After all initialization is complete, call the _draw method to pack the widgets
+        # into the Body instance 
+        self._draw()
+    
+
+    def node_select(self, event) -&gt; None:
+        &#34;&#34;&#34;
+        Update the entry_editor with the full message entry when the corresponding node in the message
+        is selected.
+        &#34;&#34;&#34;
+        index = int(self.messages_tree.selection()[0]) - 1
+        global clicked_user
+        clicked_user = (self._messages[index])
+        try:
+            global current_user
+            global chat_history
+            #Call the global variables. Useful when other classes change the variable
+            current_user = ds_messenger.DirectMessenger(&#39;168.235.86.101&#39;, current_username, current_password)
+            recieved_messages = (current_user.retrieve_all())
+            new_messages = (current_user.retrieve_new())
+            chat_history = []
+            self.set_chat_entry(&#39;&#39;)
+            for message in recieved_messages[::-1]:
+                if message[&#39;from&#39;] == clicked_user:
+                    self.add_chat_entry(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;)
+                    chat_history.append(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;) 
+        except:
+            #Except branch will execute when there is no currently loaded user.
+            pass
+
+
+    def get_text_entry(self) -&gt; str:
+        &#34;&#34;&#34;
+        Return the text that is currently displayed in the entry_editor widget.
+        &#34;&#34;&#34;
+        return self.entry_editor.get(&#39;1.0&#39;, &#39;end&#39;).rstrip()
+
+
+    def set_chat_entry(self, text:str) -&gt; None:
+        &#34;&#34;&#34;
+        Set the text to be displayed in the entry_editor widget.
+        This method is useful for clearing the widget, just pass an empty string.
+        &#34;&#34;&#34;
+        self.chat.config(state=tk.NORMAL)
+        self.chat.delete(1.0, tk.END)
+        self.chat.insert(1.0, text)
+        self.chat.config(state=tk.DISABLED)
+
+    
+    def add_chat_entry(self, text:str) -&gt; None:
+        &#34;&#34;&#34;
+        Append the chat to be displayed in the chat widget.
+        This method is useful adding multiple lines of messages from a user.
+        &#34;&#34;&#34;
+        self.chat.config(state=tk.NORMAL)
+        self.chat.insert(1.0, text)
+        self.chat.config(state=tk.DISABLED)
+
+
+    def set_text_entry(self, text:str) -&gt; None:
+        &#34;&#34;&#34;
+        Set the text to be displayed in the entry_editor widget.
+        This method is useful for clearing the widget, just pass an empty string.
+        &#34;&#34;&#34;
+        self.entry_editor.delete(1.0, tk.END)
+        self.entry_editor.insert(1.0, text)
+    
+
+    def set_messages(self, messages:list) -&gt; None:
+        &#34;&#34;&#34;
+        Populate the self._messages attribute with messages from a user.
+        &#34;&#34;&#34;
+        self._messages = messages
+        self.messages_tree.delete(*self.messages_tree.get_children())
+        for i in range(0, len(self._messages)):
+            self._insert_message_tree(i, self._messages[i])
+
+
+    def insert_message(self, message: DirectMessage) -&gt; None:
+        &#34;&#34;&#34;
+        Insert a single DirectMessage user to the message_tree widget.
+        &#34;&#34;&#34;
+        self._clicked_user = message
+        self._messages.append(message)
+        self._insert_message_tree(len(self._messages), message)
+
+
+    def reset_ui(self) -&gt; None:
+        &#34;&#34;&#34;
+        Reset all UI widgets to their default state. Useful for when clearing the UI is neccessary such
+        as when a new DirectMessage account is loaded, for example.
+        &#34;&#34;&#34;
+        self.set_text_entry(&#34;&#34;)
+        self._messages = []
+        for item in self.messages_tree.get_children():
+            self.messages_tree.delete(item)
+
+
+    def _insert_message_tree(self, id, message: DirectMessage) -&gt; None:
+        &#34;&#34;&#34;
+        Insert a username into the messages_tree widget.
+        &#34;&#34;&#34;
+        entry = message
+        # Since we don&#39;t have a title, we will use the first 24 characters of a
+        # post entry as the identifier in the post_tree widget.
+        if entry == None:
+            return None
+        if len(entry) &gt; 25:
+            entry = entry[:24] + &#34;...&#34;
+        
+        self.messages_tree.insert(&#39;&#39;, id, id, text=entry)
+    
+
+    def _draw(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call only once upon initialization to add widgets to the frame
+        &#34;&#34;&#34;
+        messages_frame = tk.Frame(master=self, width=250)
+        messages_frame.pack(fill=tk.BOTH, side=tk.LEFT)
+        self.messages_tree = ttk.Treeview(messages_frame)
+        self.messages_tree.bind(&#34;&lt;&lt;TreeviewSelect&gt;&gt;&#34;, self.node_select)
+        self.messages_tree.pack(fill=tk.BOTH, side=tk.TOP, expand=True, padx=5, pady=5)
+
+        entry_frame = tk.Frame(master=self, bg=&#34;&#34;)
+        entry_frame.pack(fill=tk.BOTH, side=tk.TOP, expand=True, pady=5)
+        
+        editor_frame = tk.Frame(master=entry_frame, bg=&#34;red&#34;)
+        editor_frame.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
+        
+        scroll_frame = tk.Frame(master=entry_frame, bg=&#34;blue&#34;, width=10)
+        scroll_frame.pack(fill=tk.BOTH, side=tk.LEFT, expand=False)
+
+        self.entry_editor = tk.Text(editor_frame, width=0, height=10, bg= &#39;white&#39;)
+        self.entry_editor.pack(fill=tk.BOTH, side=tk.BOTTOM, expand=True, padx=0, pady=0)
+        
+        self.chat = tk.Text(editor_frame, width=0, bg=&#39;white&#39;, state=tk.DISABLED)
+        self.chat.pack(fill=tk.BOTH, side=tk.TOP, expand=True, padx=0, pady=0)
+
+        self.chat_scrollbar = tk.Scrollbar(master=scroll_frame, command=self.entry_editor.yview)
+        self.chat[&#39;yscrollcommand&#39;] = self.chat_scrollbar.set
+        self.chat_scrollbar.pack(fill=tk.Y, side=tk.LEFT, expand=False, padx=0, pady=0)
+        
+
+
+
+class Footer(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the footer portion of the root frame.
+    &#34;&#34;&#34;
+    def __init__(self, root, save_callback=None, update_callback=None, add_callback=None):
+        tk.Frame.__init__(self, root)
+        self.root = root
+        self._save_callback = save_callback
+        self._update_callback = update_callback
+        self._add_callback = add_callback
+        # IntVar is a variable class that provides access to special variables
+        # for Tkinter widgets. is_online is used to hold the state of the chk_button widget.
+        self.is_online = tk.IntVar()
+        # After all initialization is complete, call the _draw method to pack the widgets
+        # into the Footer instance 
+        self._draw()
+    
+    
+    def update_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call the callback function specified in the update_callback class attribute, if
+        available, when the update widget has been clicked.
+        &#34;&#34;&#34;
+        if self._update_callback is not None:
+            self._update_callback()
+
+  
+    def save_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call the callback function specified in the save_callback class attribute, if
+        available, when the save_button has been clicked.
+        &#34;&#34;&#34;
+        if self._save_callback is not None:
+            self._save_callback()
+
+            
+    def add_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call the callback function specified in the add_callback class attribute, if
+        available, when the add_button has been clicked.
+        &#34;&#34;&#34;
+        if self._add_callback is not None:
+            self._add_callback()
+
+
+    def set_status(self, message) -&gt; None:
+        &#34;&#34;&#34;
+        Update the text that is displayed in the footer_label widget
+        &#34;&#34;&#34;
+        self.footer_label.configure(text=message)
+    
+
+    def _draw(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call only once upon initialization to add widgets to the frame
+        &#34;&#34;&#34;
+        save_button = tk.Button(master=self, text=&#34;Send&#34;, width=10, bg =&#34;light blue&#34;)
+        save_button.configure(command=self.save_click)
+        save_button.pack(fill=tk.BOTH, side=tk.RIGHT, padx=5, pady=5)
+
+        update_button = tk.Button(master=self, text=&#34;Update Messages&#34;, width=15, bg =&#34;light blue&#34;)
+        update_button.configure(command=self.update_click)
+        update_button.pack(fill=tk.BOTH, side=tk.RIGHT, padx=5, pady=5)
+
+        self.add_user = tk.Button(master=self, text=&#34;Add User&#34;, width=20, bg =&#34;light blue&#34;, state= tk.DISABLED)
+        self.add_user.configure(command=self.add_click)
+        self.add_user.pack(fill=tk.BOTH, side=tk.LEFT, padx=5, pady=5)
+
+        self.footer_label = tk.Label(master=self, text=&#34;Currently Logged In As: &#34; + str(current_username))
+        self.footer_label.pack(fill=tk.BOTH, side=tk.BOTTOM, padx=5)
+
+
+
+class MainApp(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the main portion of the root frame.
+
+    Contain the attributes for current username and password. Useful for updating
+    other widgets.
+    &#34;&#34;&#34;
+    def __init__(self, root):
+        tk.Frame.__init__(self, root)
+        global current_username
+        global current_password
+        self.root = root
+        self._is_online = False
+        current_username = None
+        current_password = None
+
+        # After all initialization is complete, call the _draw method to pack the widgets
+        # into the root frame
+        self._draw()
+
+
+    def add_user(self) -&gt; str:
+        &#34;&#34;&#34;
+        Open a new window asking for a user.
+
+        Reference Code taken from DJANGOCENTRAL, see README.txt
+        &#34;&#34;&#34;
+        ROOT = tk.Tk()
+        ROOT.withdraw()
+        USER_INP = simpledialog.askstring(title=&#34;New User Window&#34;, prompt=&#39;&#39; + &#39;\n\nAdd User.&#39;)
+        if USER_INP != None:
+            try:
+                return USER_INP
+            except Exception as e:
+                print(e)
+        else:
+            #else branch will execute when the user inputs an empty string. Returning none ensures that the username does not become populated with the empty string.
+            return None
+        
+
+
+    def add(self) -&gt; None:
+        &#34;&#34;&#34;
+        Add a user to the Tree Widget
+        &#34;&#34;&#34;
+        userToAdd = self.add_user()
+        self.body.insert_message(userToAdd)
+
+
+    def send_message(self) -&gt; None:
+        &#34;&#34;&#34;
+        Send the text currently in the entry_editor widget to the active User.
+        &#34;&#34;&#34;
+        try:
+            message=(self.body.get_text_entry())
+            if message != &#39;&#39;:
+                global chat_history
+                self.body.set_text_entry(&#34;&#34;)
+                sent_status = current_user.send(message, clicked_user)
+                new_messages = current_user.retrieve_new()
+                if sent_status is True:
+                    chat_history = chat_history[::-1]
+                    chat_history.append(current_username + &#39;: &#39; + message + &#39;\n&#39;)
+                    chat_history = chat_history[::-1]
+                    self.body.set_chat_entry(&#39;&#39;)
+                    for message in chat_history:
+                        self.body.add_chat_entry(message)
+                    if new_messages != []:
+                        for message in new_messages:
+                            if message[&#39;from&#39;] == clicked_user:
+                                chat_history = chat_history[::-1]
+                                chat_history.append(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;)
+                                chat_history = chat_history[::-1]
+                                self.body.set_chat_entry(&#39;&#39;)
+                            for message in chat_history:
+                                self.body.add_chat_entry(message)
+        except Exception as e:
+            #except branch will execute when there is no selected user to send a message to.
+            pass
+
+
+    def update_chat(self) -&gt; None:
+        &#39;&#39;&#39;
+        Populate the chat widget with newly recieved messages.
+        &#39;&#39;&#39;
+        global chat_history
+        #global call so that both user and receiver will have their messages in order and displayed.
+        try:
+            new_messages = current_user.retrieve_new()
+            if new_messages != []:
+                for message in new_messages:
+                    if message[&#39;from&#39;] == clicked_user:
+                        chat_history = chat_history[::-1]
+                        chat_history.append(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;)
+                        chat_history = chat_history[::-1]
+                        self.body.set_chat_entry(&#39;&#39;)
+                    for message in chat_history:
+                        self.body.add_chat_entry(message)
+        except:
+            #Except block will execute when there is no selected user to recieve messages from
+            pass
+
+            
+
+    def log_in(self) -&gt; None:
+        &#39;&#39;&#39;
+        Open a new window populating username and password from user input.
+        
+        Code found by Avent Chiu from https://www.simplifiedpython.net/python-gui-login/
+        &#39;&#39;&#39;
+        try:
+            #Close another login screen if it already exists. Prevent users from spamming new windows
+            self.login_screen.destroy()
+        except:
+            pass
+        self.login_screen = tk.Tk()
+        self.login_screen.title(&#34;Login&#34;)
+        self.login_screen.geometry(&#34;300x250&#34;)
+         
+        self.username = tk.StringVar()
+        self.password = tk.StringVar()
+         
+        tk.Label(self.login_screen, text=(&#34;Currently Logged In as:\n&#34; + str(current_username) + &#34;\nPlease enter details below&#34;)).pack()
+        tk.Label(self.login_screen, text=&#34;&#34;).pack()
+            
+        self.username_lable = tk.Label(self.login_screen, text=&#34;Username * &#34;)
+        self.username_lable.pack()
+         
+        self.username_entry = tk.Entry(self.login_screen, textvariable=self.username)
+        self.username_entry.pack()
+           
+        self.password_lable = tk.Label(self.login_screen, text=&#34;Password * &#34;)
+        self.password_lable.pack()
+            
+        self.password_entry = tk.Entry(self.login_screen, textvariable=self.password)
+        self.password_entry.pack()
+            
+        tk.Label(self.login_screen, text=&#34;&#34;).pack()
+            
+        tk.Button(self.login_screen, text=&#34;Login&#34;, width=10, height=1, command = self.login_user).pack()
+
+        
+
+    def login_user(self) -&gt; None:
+        &#39;&#39;&#39;
+        Populate namespace with newly inputted username and password.
+        Responsible for closing the login window when login button is pressed.
+        &#39;&#39;&#39;
+        username_info = self.username_entry.get()
+        password_info = self.password_entry.get()
+        global current_username
+        current_username = username_info
+        global current_password
+        #global variables because many methods are able to change it. Ensure that the variables are accurate.
+        current_password = password_info
+        self.login_screen.destroy()
+        self.footer.set_status(&#39;Currently Logged In As: &#39; + str(username_info))
+        self.body.reset_ui()
+        self.body.set_chat_entry(&#39;&#39;)
+        if current_username != &#39;&#39;:
+            self.footer.add_user[&#39;state&#39;] = tk.NORMAL
+        else:
+            self.footer.add_user[&#39;state&#39;] = tk.DISABLED
+            self.footer.set_status(&#39;Currently Logged In As: None&#39;)
+
+    
+    def _draw(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call only once, upon initialization to add widgets to root frame
+        &#34;&#34;&#34;
+        # Build a menu and add it to the root frame.
+        menu_bar = tk.Menu(self.root)
+        self.root[&#39;menu&#39;] = menu_bar
+        menu_file = tk.Menu(menu_bar)
+        
+        menu_bar.add_command(command=self.log_in, label=&#39;Log In&#39;)
+        #Log in button
+
+        # The Body and Footer classes must be initialized and packed into the root window.
+        self.body = Body(self.root)
+        self.body.pack(fill=tk.BOTH, side=tk.TOP, expand=True)
+        
+        self.footer = Footer(self.root, save_callback=self.send_message, update_callback=self.update_chat, add_callback = self.add)
+        self.footer.pack(fill=tk.BOTH, side=tk.BOTTOM)
+
+
+if __name__ == &#34;__main__&#34;:
+    main = tk.Tk()
+    main.title(&#34;ICS 32 Messenger App&#34;)
+    main.geometry(&#34;720x280&#34;)
+    main.option_add(&#39;*tearOff&#39;, False)
+    MainApp(main)
+    main.update()
+    main.geometry(&#34;720x600&#34;)
+    main.minsize(720, 600)
+    main.mainloop()
+    </code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ds_ui.Body"><code class="flex name class">
+<span>class <span class="ident">Body</span></span>
+<span>(</span><span>root, select_callback=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A subclass of tk.Frame that is responsible for drawing all of the widgets
+in the body portion of the root frame.</p>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Body(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the body portion of the root frame.
+    &#34;&#34;&#34;
+    def __init__(self, root, select_callback=None):
+        tk.Frame.__init__(self, root)
+        self.root = root
+        self._select_callback = select_callback
+        global clicked_user
+        clicked_user = None
+        #clicked_user is the currently selected user in the Message Tree widget.
+
+        # a list of the DirectMessage objects, same structure needed for message objects
+        self._messages = [DirectMessage]
+        
+        # After all initialization is complete, call the _draw method to pack the widgets
+        # into the Body instance 
+        self._draw()
+    
+
+    def node_select(self, event) -&gt; None:
+        &#34;&#34;&#34;
+        Update the entry_editor with the full message entry when the corresponding node in the message
+        is selected.
+        &#34;&#34;&#34;
+        index = int(self.messages_tree.selection()[0]) - 1
+        global clicked_user
+        clicked_user = (self._messages[index])
+        try:
+            global current_user
+            global chat_history
+            #Call the global variables. Useful when other classes change the variable
+            current_user = ds_messenger.DirectMessenger(&#39;168.235.86.101&#39;, current_username, current_password)
+            recieved_messages = (current_user.retrieve_all())
+            new_messages = (current_user.retrieve_new())
+            chat_history = []
+            self.set_chat_entry(&#39;&#39;)
+            for message in recieved_messages[::-1]:
+                if message[&#39;from&#39;] == clicked_user:
+                    self.add_chat_entry(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;)
+                    chat_history.append(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;) 
+        except:
+            #Except branch will execute when there is no currently loaded user.
+            pass
+
+
+    def get_text_entry(self) -&gt; str:
+        &#34;&#34;&#34;
+        Return the text that is currently displayed in the entry_editor widget.
+        &#34;&#34;&#34;
+        return self.entry_editor.get(&#39;1.0&#39;, &#39;end&#39;).rstrip()
+
+
+    def set_chat_entry(self, text:str) -&gt; None:
+        &#34;&#34;&#34;
+        Set the text to be displayed in the entry_editor widget.
+        This method is useful for clearing the widget, just pass an empty string.
+        &#34;&#34;&#34;
+        self.chat.config(state=tk.NORMAL)
+        self.chat.delete(1.0, tk.END)
+        self.chat.insert(1.0, text)
+        self.chat.config(state=tk.DISABLED)
+
+    
+    def add_chat_entry(self, text:str) -&gt; None:
+        &#34;&#34;&#34;
+        Append the chat to be displayed in the chat widget.
+        This method is useful adding multiple lines of messages from a user.
+        &#34;&#34;&#34;
+        self.chat.config(state=tk.NORMAL)
+        self.chat.insert(1.0, text)
+        self.chat.config(state=tk.DISABLED)
+
+
+    def set_text_entry(self, text:str) -&gt; None:
+        &#34;&#34;&#34;
+        Set the text to be displayed in the entry_editor widget.
+        This method is useful for clearing the widget, just pass an empty string.
+        &#34;&#34;&#34;
+        self.entry_editor.delete(1.0, tk.END)
+        self.entry_editor.insert(1.0, text)
+    
+
+    def set_messages(self, messages:list) -&gt; None:
+        &#34;&#34;&#34;
+        Populate the self._messages attribute with messages from a user.
+        &#34;&#34;&#34;
+        self._messages = messages
+        self.messages_tree.delete(*self.messages_tree.get_children())
+        for i in range(0, len(self._messages)):
+            self._insert_message_tree(i, self._messages[i])
+
+
+    def insert_message(self, message: DirectMessage) -&gt; None:
+        &#34;&#34;&#34;
+        Insert a single DirectMessage user to the message_tree widget.
+        &#34;&#34;&#34;
+        self._clicked_user = message
+        self._messages.append(message)
+        self._insert_message_tree(len(self._messages), message)
+
+
+    def reset_ui(self) -&gt; None:
+        &#34;&#34;&#34;
+        Reset all UI widgets to their default state. Useful for when clearing the UI is neccessary such
+        as when a new DirectMessage account is loaded, for example.
+        &#34;&#34;&#34;
+        self.set_text_entry(&#34;&#34;)
+        self._messages = []
+        for item in self.messages_tree.get_children():
+            self.messages_tree.delete(item)
+
+
+    def _insert_message_tree(self, id, message: DirectMessage) -&gt; None:
+        &#34;&#34;&#34;
+        Insert a username into the messages_tree widget.
+        &#34;&#34;&#34;
+        entry = message
+        # Since we don&#39;t have a title, we will use the first 24 characters of a
+        # post entry as the identifier in the post_tree widget.
+        if entry == None:
+            return None
+        if len(entry) &gt; 25:
+            entry = entry[:24] + &#34;...&#34;
+        
+        self.messages_tree.insert(&#39;&#39;, id, id, text=entry)
+    
+
+    def _draw(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call only once upon initialization to add widgets to the frame
+        &#34;&#34;&#34;
+        messages_frame = tk.Frame(master=self, width=250)
+        messages_frame.pack(fill=tk.BOTH, side=tk.LEFT)
+        self.messages_tree = ttk.Treeview(messages_frame)
+        self.messages_tree.bind(&#34;&lt;&lt;TreeviewSelect&gt;&gt;&#34;, self.node_select)
+        self.messages_tree.pack(fill=tk.BOTH, side=tk.TOP, expand=True, padx=5, pady=5)
+
+        entry_frame = tk.Frame(master=self, bg=&#34;&#34;)
+        entry_frame.pack(fill=tk.BOTH, side=tk.TOP, expand=True, pady=5)
+        
+        editor_frame = tk.Frame(master=entry_frame, bg=&#34;red&#34;)
+        editor_frame.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
+        
+        scroll_frame = tk.Frame(master=entry_frame, bg=&#34;blue&#34;, width=10)
+        scroll_frame.pack(fill=tk.BOTH, side=tk.LEFT, expand=False)
+
+        self.entry_editor = tk.Text(editor_frame, width=0, height=10, bg= &#39;white&#39;)
+        self.entry_editor.pack(fill=tk.BOTH, side=tk.BOTTOM, expand=True, padx=0, pady=0)
+        
+        self.chat = tk.Text(editor_frame, width=0, bg=&#39;white&#39;, state=tk.DISABLED)
+        self.chat.pack(fill=tk.BOTH, side=tk.TOP, expand=True, padx=0, pady=0)
+
+        self.chat_scrollbar = tk.Scrollbar(master=scroll_frame, command=self.entry_editor.yview)
+        self.chat[&#39;yscrollcommand&#39;] = self.chat_scrollbar.set
+        self.chat_scrollbar.pack(fill=tk.Y, side=tk.LEFT, expand=False, padx=0, pady=0)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="ds_ui.Body.add_chat_entry"><code class="name flex">
+<span>def <span class="ident">add_chat_entry</span></span>(<span>self, text: str) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Append the chat to be displayed in the chat widget.
+This method is useful adding multiple lines of messages from a user.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_chat_entry(self, text:str) -&gt; None:
+    &#34;&#34;&#34;
+    Append the chat to be displayed in the chat widget.
+    This method is useful adding multiple lines of messages from a user.
+    &#34;&#34;&#34;
+    self.chat.config(state=tk.NORMAL)
+    self.chat.insert(1.0, text)
+    self.chat.config(state=tk.DISABLED)</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Body.get_text_entry"><code class="name flex">
+<span>def <span class="ident">get_text_entry</span></span>(<span>self) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return the text that is currently displayed in the entry_editor widget.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_text_entry(self) -&gt; str:
+    &#34;&#34;&#34;
+    Return the text that is currently displayed in the entry_editor widget.
+    &#34;&#34;&#34;
+    return self.entry_editor.get(&#39;1.0&#39;, &#39;end&#39;).rstrip()</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Body.insert_message"><code class="name flex">
+<span>def <span class="ident">insert_message</span></span>(<span>self, message: ds_messenger.DirectMessage) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Insert a single DirectMessage user to the message_tree widget.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def insert_message(self, message: DirectMessage) -&gt; None:
+    &#34;&#34;&#34;
+    Insert a single DirectMessage user to the message_tree widget.
+    &#34;&#34;&#34;
+    self._clicked_user = message
+    self._messages.append(message)
+    self._insert_message_tree(len(self._messages), message)</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Body.node_select"><code class="name flex">
+<span>def <span class="ident">node_select</span></span>(<span>self, event) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Update the entry_editor with the full message entry when the corresponding node in the message
+is selected.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def node_select(self, event) -&gt; None:
+    &#34;&#34;&#34;
+    Update the entry_editor with the full message entry when the corresponding node in the message
+    is selected.
+    &#34;&#34;&#34;
+    index = int(self.messages_tree.selection()[0]) - 1
+    global clicked_user
+    clicked_user = (self._messages[index])
+    try:
+        global current_user
+        global chat_history
+        #Call the global variables. Useful when other classes change the variable
+        current_user = ds_messenger.DirectMessenger(&#39;168.235.86.101&#39;, current_username, current_password)
+        recieved_messages = (current_user.retrieve_all())
+        new_messages = (current_user.retrieve_new())
+        chat_history = []
+        self.set_chat_entry(&#39;&#39;)
+        for message in recieved_messages[::-1]:
+            if message[&#39;from&#39;] == clicked_user:
+                self.add_chat_entry(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;)
+                chat_history.append(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;) 
+    except:
+        #Except branch will execute when there is no currently loaded user.
+        pass</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Body.reset_ui"><code class="name flex">
+<span>def <span class="ident">reset_ui</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Reset all UI widgets to their default state. Useful for when clearing the UI is neccessary such
+as when a new DirectMessage account is loaded, for example.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def reset_ui(self) -&gt; None:
+    &#34;&#34;&#34;
+    Reset all UI widgets to their default state. Useful for when clearing the UI is neccessary such
+    as when a new DirectMessage account is loaded, for example.
+    &#34;&#34;&#34;
+    self.set_text_entry(&#34;&#34;)
+    self._messages = []
+    for item in self.messages_tree.get_children():
+        self.messages_tree.delete(item)</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Body.set_chat_entry"><code class="name flex">
+<span>def <span class="ident">set_chat_entry</span></span>(<span>self, text: str) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the text to be displayed in the entry_editor widget.
+This method is useful for clearing the widget, just pass an empty string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_chat_entry(self, text:str) -&gt; None:
+    &#34;&#34;&#34;
+    Set the text to be displayed in the entry_editor widget.
+    This method is useful for clearing the widget, just pass an empty string.
+    &#34;&#34;&#34;
+    self.chat.config(state=tk.NORMAL)
+    self.chat.delete(1.0, tk.END)
+    self.chat.insert(1.0, text)
+    self.chat.config(state=tk.DISABLED)</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Body.set_messages"><code class="name flex">
+<span>def <span class="ident">set_messages</span></span>(<span>self, messages: list) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Populate the self._messages attribute with messages from a user.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_messages(self, messages:list) -&gt; None:
+    &#34;&#34;&#34;
+    Populate the self._messages attribute with messages from a user.
+    &#34;&#34;&#34;
+    self._messages = messages
+    self.messages_tree.delete(*self.messages_tree.get_children())
+    for i in range(0, len(self._messages)):
+        self._insert_message_tree(i, self._messages[i])</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Body.set_text_entry"><code class="name flex">
+<span>def <span class="ident">set_text_entry</span></span>(<span>self, text: str) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the text to be displayed in the entry_editor widget.
+This method is useful for clearing the widget, just pass an empty string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_text_entry(self, text:str) -&gt; None:
+    &#34;&#34;&#34;
+    Set the text to be displayed in the entry_editor widget.
+    This method is useful for clearing the widget, just pass an empty string.
+    &#34;&#34;&#34;
+    self.entry_editor.delete(1.0, tk.END)
+    self.entry_editor.insert(1.0, text)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="ds_ui.Footer"><code class="flex name class">
+<span>class <span class="ident">Footer</span></span>
+<span>(</span><span>root, save_callback=None, update_callback=None, add_callback=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A subclass of tk.Frame that is responsible for drawing all of the widgets
+in the footer portion of the root frame.</p>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Footer(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the footer portion of the root frame.
+    &#34;&#34;&#34;
+    def __init__(self, root, save_callback=None, update_callback=None, add_callback=None):
+        tk.Frame.__init__(self, root)
+        self.root = root
+        self._save_callback = save_callback
+        self._update_callback = update_callback
+        self._add_callback = add_callback
+        # IntVar is a variable class that provides access to special variables
+        # for Tkinter widgets. is_online is used to hold the state of the chk_button widget.
+        self.is_online = tk.IntVar()
+        # After all initialization is complete, call the _draw method to pack the widgets
+        # into the Footer instance 
+        self._draw()
+    
+    
+    def update_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call the callback function specified in the update_callback class attribute, if
+        available, when the update widget has been clicked.
+        &#34;&#34;&#34;
+        if self._update_callback is not None:
+            self._update_callback()
+
+  
+    def save_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call the callback function specified in the save_callback class attribute, if
+        available, when the save_button has been clicked.
+        &#34;&#34;&#34;
+        if self._save_callback is not None:
+            self._save_callback()
+
+            
+    def add_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call the callback function specified in the add_callback class attribute, if
+        available, when the add_button has been clicked.
+        &#34;&#34;&#34;
+        if self._add_callback is not None:
+            self._add_callback()
+
+
+    def set_status(self, message) -&gt; None:
+        &#34;&#34;&#34;
+        Update the text that is displayed in the footer_label widget
+        &#34;&#34;&#34;
+        self.footer_label.configure(text=message)
+    
+
+    def _draw(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call only once upon initialization to add widgets to the frame
+        &#34;&#34;&#34;
+        save_button = tk.Button(master=self, text=&#34;Send&#34;, width=10, bg =&#34;light blue&#34;)
+        save_button.configure(command=self.save_click)
+        save_button.pack(fill=tk.BOTH, side=tk.RIGHT, padx=5, pady=5)
+
+        update_button = tk.Button(master=self, text=&#34;Update Messages&#34;, width=15, bg =&#34;light blue&#34;)
+        update_button.configure(command=self.update_click)
+        update_button.pack(fill=tk.BOTH, side=tk.RIGHT, padx=5, pady=5)
+
+        self.add_user = tk.Button(master=self, text=&#34;Add User&#34;, width=20, bg =&#34;light blue&#34;, state= tk.DISABLED)
+        self.add_user.configure(command=self.add_click)
+        self.add_user.pack(fill=tk.BOTH, side=tk.LEFT, padx=5, pady=5)
+
+        self.footer_label = tk.Label(master=self, text=&#34;Currently Logged In As: &#34; + str(current_username))
+        self.footer_label.pack(fill=tk.BOTH, side=tk.BOTTOM, padx=5)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="ds_ui.Footer.add_click"><code class="name flex">
+<span>def <span class="ident">add_click</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Call the callback function specified in the add_callback class attribute, if
+available, when the add_button has been clicked.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_click(self) -&gt; None:
+    &#34;&#34;&#34;
+    Call the callback function specified in the add_callback class attribute, if
+    available, when the add_button has been clicked.
+    &#34;&#34;&#34;
+    if self._add_callback is not None:
+        self._add_callback()</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Footer.save_click"><code class="name flex">
+<span>def <span class="ident">save_click</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Call the callback function specified in the save_callback class attribute, if
+available, when the save_button has been clicked.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_click(self) -&gt; None:
+    &#34;&#34;&#34;
+    Call the callback function specified in the save_callback class attribute, if
+    available, when the save_button has been clicked.
+    &#34;&#34;&#34;
+    if self._save_callback is not None:
+        self._save_callback()</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Footer.set_status"><code class="name flex">
+<span>def <span class="ident">set_status</span></span>(<span>self, message) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Update the text that is displayed in the footer_label widget</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_status(self, message) -&gt; None:
+    &#34;&#34;&#34;
+    Update the text that is displayed in the footer_label widget
+    &#34;&#34;&#34;
+    self.footer_label.configure(text=message)</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.Footer.update_click"><code class="name flex">
+<span>def <span class="ident">update_click</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Call the callback function specified in the update_callback class attribute, if
+available, when the update widget has been clicked.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_click(self) -&gt; None:
+    &#34;&#34;&#34;
+    Call the callback function specified in the update_callback class attribute, if
+    available, when the update widget has been clicked.
+    &#34;&#34;&#34;
+    if self._update_callback is not None:
+        self._update_callback()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="ds_ui.MainApp"><code class="flex name class">
+<span>class <span class="ident">MainApp</span></span>
+<span>(</span><span>root)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A subclass of tk.Frame that is responsible for drawing all of the widgets
+in the main portion of the root frame.</p>
+<p>Contain the attributes for current username and password. Useful for updating
+other widgets.</p>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MainApp(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the main portion of the root frame.
+
+    Contain the attributes for current username and password. Useful for updating
+    other widgets.
+    &#34;&#34;&#34;
+    def __init__(self, root):
+        tk.Frame.__init__(self, root)
+        global current_username
+        global current_password
+        self.root = root
+        self._is_online = False
+        current_username = None
+        current_password = None
+
+        # After all initialization is complete, call the _draw method to pack the widgets
+        # into the root frame
+        self._draw()
+
+
+    def add_user(self) -&gt; str:
+        &#34;&#34;&#34;
+        Open a new window asking for a user.
+
+        Reference Code taken from DJANGOCENTRAL, see README.txt
+        &#34;&#34;&#34;
+        ROOT = tk.Tk()
+        ROOT.withdraw()
+        USER_INP = simpledialog.askstring(title=&#34;New User Window&#34;, prompt=&#39;&#39; + &#39;\n\nAdd User.&#39;)
+        if USER_INP != None:
+            try:
+                return USER_INP
+            except Exception as e:
+                print(e)
+        else:
+            #else branch will execute when the user inputs an empty string. Returning none ensures that the username does not become populated with the empty string.
+            return None
+        
+
+
+    def add(self) -&gt; None:
+        &#34;&#34;&#34;
+        Add a user to the Tree Widget
+        &#34;&#34;&#34;
+        userToAdd = self.add_user()
+        self.body.insert_message(userToAdd)
+
+
+    def send_message(self) -&gt; None:
+        &#34;&#34;&#34;
+        Send the text currently in the entry_editor widget to the active User.
+        &#34;&#34;&#34;
+        try:
+            message=(self.body.get_text_entry())
+            if message != &#39;&#39;:
+                global chat_history
+                self.body.set_text_entry(&#34;&#34;)
+                sent_status = current_user.send(message, clicked_user)
+                new_messages = current_user.retrieve_new()
+                if sent_status is True:
+                    chat_history = chat_history[::-1]
+                    chat_history.append(current_username + &#39;: &#39; + message + &#39;\n&#39;)
+                    chat_history = chat_history[::-1]
+                    self.body.set_chat_entry(&#39;&#39;)
+                    for message in chat_history:
+                        self.body.add_chat_entry(message)
+                    if new_messages != []:
+                        for message in new_messages:
+                            if message[&#39;from&#39;] == clicked_user:
+                                chat_history = chat_history[::-1]
+                                chat_history.append(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;)
+                                chat_history = chat_history[::-1]
+                                self.body.set_chat_entry(&#39;&#39;)
+                            for message in chat_history:
+                                self.body.add_chat_entry(message)
+        except Exception as e:
+            #except branch will execute when there is no selected user to send a message to.
+            pass
+
+
+    def update_chat(self) -&gt; None:
+        &#39;&#39;&#39;
+        Populate the chat widget with newly recieved messages.
+        &#39;&#39;&#39;
+        global chat_history
+        #global call so that both user and receiver will have their messages in order and displayed.
+        try:
+            new_messages = current_user.retrieve_new()
+            if new_messages != []:
+                for message in new_messages:
+                    if message[&#39;from&#39;] == clicked_user:
+                        chat_history = chat_history[::-1]
+                        chat_history.append(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;)
+                        chat_history = chat_history[::-1]
+                        self.body.set_chat_entry(&#39;&#39;)
+                    for message in chat_history:
+                        self.body.add_chat_entry(message)
+        except:
+            #Except block will execute when there is no selected user to recieve messages from
+            pass
+
+            
+
+    def log_in(self) -&gt; None:
+        &#39;&#39;&#39;
+        Open a new window populating username and password from user input.
+        
+        Code found by Avent Chiu from https://www.simplifiedpython.net/python-gui-login/
+        &#39;&#39;&#39;
+        try:
+            #Close another login screen if it already exists. Prevent users from spamming new windows
+            self.login_screen.destroy()
+        except:
+            pass
+        self.login_screen = tk.Tk()
+        self.login_screen.title(&#34;Login&#34;)
+        self.login_screen.geometry(&#34;300x250&#34;)
+         
+        self.username = tk.StringVar()
+        self.password = tk.StringVar()
+         
+        tk.Label(self.login_screen, text=(&#34;Currently Logged In as:\n&#34; + str(current_username) + &#34;\nPlease enter details below&#34;)).pack()
+        tk.Label(self.login_screen, text=&#34;&#34;).pack()
+            
+        self.username_lable = tk.Label(self.login_screen, text=&#34;Username * &#34;)
+        self.username_lable.pack()
+         
+        self.username_entry = tk.Entry(self.login_screen, textvariable=self.username)
+        self.username_entry.pack()
+           
+        self.password_lable = tk.Label(self.login_screen, text=&#34;Password * &#34;)
+        self.password_lable.pack()
+            
+        self.password_entry = tk.Entry(self.login_screen, textvariable=self.password)
+        self.password_entry.pack()
+            
+        tk.Label(self.login_screen, text=&#34;&#34;).pack()
+            
+        tk.Button(self.login_screen, text=&#34;Login&#34;, width=10, height=1, command = self.login_user).pack()
+
+        
+
+    def login_user(self) -&gt; None:
+        &#39;&#39;&#39;
+        Populate namespace with newly inputted username and password.
+        Responsible for closing the login window when login button is pressed.
+        &#39;&#39;&#39;
+        username_info = self.username_entry.get()
+        password_info = self.password_entry.get()
+        global current_username
+        current_username = username_info
+        global current_password
+        #global variables because many methods are able to change it. Ensure that the variables are accurate.
+        current_password = password_info
+        self.login_screen.destroy()
+        self.footer.set_status(&#39;Currently Logged In As: &#39; + str(username_info))
+        self.body.reset_ui()
+        self.body.set_chat_entry(&#39;&#39;)
+        if current_username != &#39;&#39;:
+            self.footer.add_user[&#39;state&#39;] = tk.NORMAL
+        else:
+            self.footer.add_user[&#39;state&#39;] = tk.DISABLED
+            self.footer.set_status(&#39;Currently Logged In As: None&#39;)
+
+    
+    def _draw(self) -&gt; None:
+        &#34;&#34;&#34;
+        Call only once, upon initialization to add widgets to root frame
+        &#34;&#34;&#34;
+        # Build a menu and add it to the root frame.
+        menu_bar = tk.Menu(self.root)
+        self.root[&#39;menu&#39;] = menu_bar
+        menu_file = tk.Menu(menu_bar)
+        
+        menu_bar.add_command(command=self.log_in, label=&#39;Log In&#39;)
+        #Log in button
+
+        # The Body and Footer classes must be initialized and packed into the root window.
+        self.body = Body(self.root)
+        self.body.pack(fill=tk.BOTH, side=tk.TOP, expand=True)
+        
+        self.footer = Footer(self.root, save_callback=self.send_message, update_callback=self.update_chat, add_callback = self.add)
+        self.footer.pack(fill=tk.BOTH, side=tk.BOTTOM)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="ds_ui.MainApp.add"><code class="name flex">
+<span>def <span class="ident">add</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a user to the Tree Widget</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add(self) -&gt; None:
+    &#34;&#34;&#34;
+    Add a user to the Tree Widget
+    &#34;&#34;&#34;
+    userToAdd = self.add_user()
+    self.body.insert_message(userToAdd)</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.MainApp.add_user"><code class="name flex">
+<span>def <span class="ident">add_user</span></span>(<span>self) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Open a new window asking for a user.</p>
+<p>Reference Code taken from DJANGOCENTRAL, see README.txt</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_user(self) -&gt; str:
+    &#34;&#34;&#34;
+    Open a new window asking for a user.
+
+    Reference Code taken from DJANGOCENTRAL, see README.txt
+    &#34;&#34;&#34;
+    ROOT = tk.Tk()
+    ROOT.withdraw()
+    USER_INP = simpledialog.askstring(title=&#34;New User Window&#34;, prompt=&#39;&#39; + &#39;\n\nAdd User.&#39;)
+    if USER_INP != None:
+        try:
+            return USER_INP
+        except Exception as e:
+            print(e)
+    else:
+        #else branch will execute when the user inputs an empty string. Returning none ensures that the username does not become populated with the empty string.
+        return None</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.MainApp.log_in"><code class="name flex">
+<span>def <span class="ident">log_in</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Open a new window populating username and password from user input.</p>
+<p>Code found by Avent Chiu from <a href="https://www.simplifiedpython.net/python-gui-login/">https://www.simplifiedpython.net/python-gui-login/</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def log_in(self) -&gt; None:
+    &#39;&#39;&#39;
+    Open a new window populating username and password from user input.
+    
+    Code found by Avent Chiu from https://www.simplifiedpython.net/python-gui-login/
+    &#39;&#39;&#39;
+    try:
+        #Close another login screen if it already exists. Prevent users from spamming new windows
+        self.login_screen.destroy()
+    except:
+        pass
+    self.login_screen = tk.Tk()
+    self.login_screen.title(&#34;Login&#34;)
+    self.login_screen.geometry(&#34;300x250&#34;)
+     
+    self.username = tk.StringVar()
+    self.password = tk.StringVar()
+     
+    tk.Label(self.login_screen, text=(&#34;Currently Logged In as:\n&#34; + str(current_username) + &#34;\nPlease enter details below&#34;)).pack()
+    tk.Label(self.login_screen, text=&#34;&#34;).pack()
+        
+    self.username_lable = tk.Label(self.login_screen, text=&#34;Username * &#34;)
+    self.username_lable.pack()
+     
+    self.username_entry = tk.Entry(self.login_screen, textvariable=self.username)
+    self.username_entry.pack()
+       
+    self.password_lable = tk.Label(self.login_screen, text=&#34;Password * &#34;)
+    self.password_lable.pack()
+        
+    self.password_entry = tk.Entry(self.login_screen, textvariable=self.password)
+    self.password_entry.pack()
+        
+    tk.Label(self.login_screen, text=&#34;&#34;).pack()
+        
+    tk.Button(self.login_screen, text=&#34;Login&#34;, width=10, height=1, command = self.login_user).pack()</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.MainApp.login_user"><code class="name flex">
+<span>def <span class="ident">login_user</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Populate namespace with newly inputted username and password.
+Responsible for closing the login window when login button is pressed.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def login_user(self) -&gt; None:
+    &#39;&#39;&#39;
+    Populate namespace with newly inputted username and password.
+    Responsible for closing the login window when login button is pressed.
+    &#39;&#39;&#39;
+    username_info = self.username_entry.get()
+    password_info = self.password_entry.get()
+    global current_username
+    current_username = username_info
+    global current_password
+    #global variables because many methods are able to change it. Ensure that the variables are accurate.
+    current_password = password_info
+    self.login_screen.destroy()
+    self.footer.set_status(&#39;Currently Logged In As: &#39; + str(username_info))
+    self.body.reset_ui()
+    self.body.set_chat_entry(&#39;&#39;)
+    if current_username != &#39;&#39;:
+        self.footer.add_user[&#39;state&#39;] = tk.NORMAL
+    else:
+        self.footer.add_user[&#39;state&#39;] = tk.DISABLED
+        self.footer.set_status(&#39;Currently Logged In As: None&#39;)</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.MainApp.send_message"><code class="name flex">
+<span>def <span class="ident">send_message</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Send the text currently in the entry_editor widget to the active User.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_message(self) -&gt; None:
+    &#34;&#34;&#34;
+    Send the text currently in the entry_editor widget to the active User.
+    &#34;&#34;&#34;
+    try:
+        message=(self.body.get_text_entry())
+        if message != &#39;&#39;:
+            global chat_history
+            self.body.set_text_entry(&#34;&#34;)
+            sent_status = current_user.send(message, clicked_user)
+            new_messages = current_user.retrieve_new()
+            if sent_status is True:
+                chat_history = chat_history[::-1]
+                chat_history.append(current_username + &#39;: &#39; + message + &#39;\n&#39;)
+                chat_history = chat_history[::-1]
+                self.body.set_chat_entry(&#39;&#39;)
+                for message in chat_history:
+                    self.body.add_chat_entry(message)
+                if new_messages != []:
+                    for message in new_messages:
+                        if message[&#39;from&#39;] == clicked_user:
+                            chat_history = chat_history[::-1]
+                            chat_history.append(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;)
+                            chat_history = chat_history[::-1]
+                            self.body.set_chat_entry(&#39;&#39;)
+                        for message in chat_history:
+                            self.body.add_chat_entry(message)
+    except Exception as e:
+        #except branch will execute when there is no selected user to send a message to.
+        pass</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.MainApp.update_chat"><code class="name flex">
+<span>def <span class="ident">update_chat</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Populate the chat widget with newly recieved messages.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_chat(self) -&gt; None:
+    &#39;&#39;&#39;
+    Populate the chat widget with newly recieved messages.
+    &#39;&#39;&#39;
+    global chat_history
+    #global call so that both user and receiver will have their messages in order and displayed.
+    try:
+        new_messages = current_user.retrieve_new()
+        if new_messages != []:
+            for message in new_messages:
+                if message[&#39;from&#39;] == clicked_user:
+                    chat_history = chat_history[::-1]
+                    chat_history.append(clicked_user + &#39;: &#39; + message[&#39;message&#39;]+&#39;\n&#39;)
+                    chat_history = chat_history[::-1]
+                    self.body.set_chat_entry(&#39;&#39;)
+                for message in chat_history:
+                    self.body.add_chat_entry(message)
+    except:
+        #Except block will execute when there is no selected user to recieve messages from
+        pass</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="ds_ui.loadedUser"><code class="flex name class">
+<span>class <span class="ident">loadedUser</span></span>
+<span>(</span><span>username=None, password=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A loadedUser object used for storing data on the currently loaded user account on the UI.
+Useful for finding current username and password.</p>
+<p>Attributes:</p>
+<p>username - The username of the currently loaded account.
+password - The password of the currently loaded account.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class loadedUser():
+    &#34;&#34;&#34;
+    A loadedUser object used for storing data on the currently loaded user account on the UI.
+    Useful for finding current username and password.
+
+    Attributes:
+
+    username - The username of the currently loaded account.
+    password - The password of the currently loaded account.
+    &#34;&#34;&#34;
+    def __init__(self, username=None, password=None):
+        global current_username
+        global current_password
+        self.username = current_username
+        self.password = current_password
+
+
+    def set_password(self, entry:str) -&gt; None:
+        &#39;&#39;&#39;
+        Set the password attribute to the inputted string.
+        Useful when a new user is logged in.
+        &#39;&#39;&#39;
+        self.password = entry
+
+
+    def set_username(self, entry:str) -&gt; None:
+        &#39;&#39;&#39;
+        Set the username attribute to the inputted string.
+        Useful when a new user is logged in.
+        &#39;&#39;&#39;
+        self.username = entry
+
+
+    def set_dsuserver(self, entry:str) -&gt; None:
+        &#39;&#39;&#39;
+        Set the dsusver attribute to the inputted string.
+        Use for third-party applications since the default
+        server is the ICS 32&#39;s distributed address.
+        &#39;&#39;&#39;
+        self.dsuserver = entry</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="ds_ui.loadedUser.set_dsuserver"><code class="name flex">
+<span>def <span class="ident">set_dsuserver</span></span>(<span>self, entry: str) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the dsusver attribute to the inputted string.
+Use for third-party applications since the default
+server is the ICS 32's distributed address.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_dsuserver(self, entry:str) -&gt; None:
+    &#39;&#39;&#39;
+    Set the dsusver attribute to the inputted string.
+    Use for third-party applications since the default
+    server is the ICS 32&#39;s distributed address.
+    &#39;&#39;&#39;
+    self.dsuserver = entry</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.loadedUser.set_password"><code class="name flex">
+<span>def <span class="ident">set_password</span></span>(<span>self, entry: str) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the password attribute to the inputted string.
+Useful when a new user is logged in.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_password(self, entry:str) -&gt; None:
+    &#39;&#39;&#39;
+    Set the password attribute to the inputted string.
+    Useful when a new user is logged in.
+    &#39;&#39;&#39;
+    self.password = entry</code></pre>
+</details>
+</dd>
+<dt id="ds_ui.loadedUser.set_username"><code class="name flex">
+<span>def <span class="ident">set_username</span></span>(<span>self, entry: str) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the username attribute to the inputted string.
+Useful when a new user is logged in.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_username(self, entry:str) -&gt; None:
+    &#39;&#39;&#39;
+    Set the username attribute to the inputted string.
+    Useful when a new user is logged in.
+    &#39;&#39;&#39;
+    self.username = entry</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="ds_ui.Body" href="#ds_ui.Body">Body</a></code></h4>
+<ul class="two-column">
+<li><code><a title="ds_ui.Body.add_chat_entry" href="#ds_ui.Body.add_chat_entry">add_chat_entry</a></code></li>
+<li><code><a title="ds_ui.Body.get_text_entry" href="#ds_ui.Body.get_text_entry">get_text_entry</a></code></li>
+<li><code><a title="ds_ui.Body.insert_message" href="#ds_ui.Body.insert_message">insert_message</a></code></li>
+<li><code><a title="ds_ui.Body.node_select" href="#ds_ui.Body.node_select">node_select</a></code></li>
+<li><code><a title="ds_ui.Body.reset_ui" href="#ds_ui.Body.reset_ui">reset_ui</a></code></li>
+<li><code><a title="ds_ui.Body.set_chat_entry" href="#ds_ui.Body.set_chat_entry">set_chat_entry</a></code></li>
+<li><code><a title="ds_ui.Body.set_messages" href="#ds_ui.Body.set_messages">set_messages</a></code></li>
+<li><code><a title="ds_ui.Body.set_text_entry" href="#ds_ui.Body.set_text_entry">set_text_entry</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="ds_ui.Footer" href="#ds_ui.Footer">Footer</a></code></h4>
+<ul class="">
+<li><code><a title="ds_ui.Footer.add_click" href="#ds_ui.Footer.add_click">add_click</a></code></li>
+<li><code><a title="ds_ui.Footer.save_click" href="#ds_ui.Footer.save_click">save_click</a></code></li>
+<li><code><a title="ds_ui.Footer.set_status" href="#ds_ui.Footer.set_status">set_status</a></code></li>
+<li><code><a title="ds_ui.Footer.update_click" href="#ds_ui.Footer.update_click">update_click</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="ds_ui.MainApp" href="#ds_ui.MainApp">MainApp</a></code></h4>
+<ul class="two-column">
+<li><code><a title="ds_ui.MainApp.add" href="#ds_ui.MainApp.add">add</a></code></li>
+<li><code><a title="ds_ui.MainApp.add_user" href="#ds_ui.MainApp.add_user">add_user</a></code></li>
+<li><code><a title="ds_ui.MainApp.log_in" href="#ds_ui.MainApp.log_in">log_in</a></code></li>
+<li><code><a title="ds_ui.MainApp.login_user" href="#ds_ui.MainApp.login_user">login_user</a></code></li>
+<li><code><a title="ds_ui.MainApp.send_message" href="#ds_ui.MainApp.send_message">send_message</a></code></li>
+<li><code><a title="ds_ui.MainApp.update_chat" href="#ds_ui.MainApp.update_chat">update_chat</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="ds_ui.loadedUser" href="#ds_ui.loadedUser">loadedUser</a></code></h4>
+<ul class="">
+<li><code><a title="ds_ui.loadedUser.set_dsuserver" href="#ds_ui.loadedUser.set_dsuserver">set_dsuserver</a></code></li>
+<li><code><a title="ds_ui.loadedUser.set_password" href="#ds_ui.loadedUser.set_password">set_password</a></code></li>
+<li><code><a title="ds_ui.loadedUser.set_username" href="#ds_ui.loadedUser.set_username">set_username</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>
