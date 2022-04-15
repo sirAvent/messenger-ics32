@@ -1,5 +1,5 @@
 # uci-messaging-app
-INSTRUCTIONS FOR USING THE PROGRAM:
+## INSTRUCTIONS FOR USING THE PROGRAM:
 
 	Run ds_ui.py
 	To start sending and receiving messages, a valid user must be logged in using the "Log In" button on the top left corner of the window.
