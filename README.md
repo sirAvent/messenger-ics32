@@ -1,4 +1,6 @@
 # ICS 32 Messaging Application
+![image](https://cdn.discordapp.com/attachments/959304393323327549/965740778892709918/unknown.png)
+
 ![image](https://cdn.discordapp.com/attachments/808213206253961216/950523897508425728/messenger.gif)
 
 ## INSTRUCTIONS FOR USING THE PROGRAM:
